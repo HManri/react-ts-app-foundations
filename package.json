@@ -5,6 +5,14 @@
   "author": "HManri",
   "license": "ISC",
   "keywords": [],
+  "homepage": "https://github.com/HManri/react-ts-app-foundations",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HManri/react-ts-app-foundations"
+  },
+  "bugs": {
+    "url": "https://github.com/HManri/react-ts-app-foundations/issues"
+  },
   "main": "src/app/index.tsx",
   "scripts": {
     "start": "webpack serve",
@@ -14,13 +22,20 @@
     "prettier:check": "prettier . --check",
     "prettier:write": "prettier . --write",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "lint-staged": "lint-staged"
   },
   "pre-commit": [
     "test",
-    "prettier:write",
-    "eslint"
   ],
+  "lint-staged": {
+    "src/**": [
+      "prettier --write"
+    ],
+    "src/**/*": [
+      "eslint"
+    ]
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -47,6 +62,7 @@
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^15.2.0",
     "pre-commit": "^1.2.2",
     "prettier": "^3.2.4",
     "style-loader": "^3.3.4",

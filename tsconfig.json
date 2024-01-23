@@ -38,8 +38,8 @@
 
     // Interop Constraints Configuration
     "esModuleInterop": true,
-    "isolatedModules": true
+    "isolatedModules": true,
   },
   "include": ["src/**/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }
